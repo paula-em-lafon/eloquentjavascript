@@ -1,0 +1,13 @@
+<textarea id="code">return "hi";</textarea>
+<button id="button">Run</button>
+<pre id="output"></pre>
+
+<script>
+  button = document.getElementById("button");
+  func = document.getElementById("code").textContent;
+  
+  button.addEventListener("click", event => {
+    var asFunc = new Function(func);
+  	console.log(asFunc())
+    event.preventDefault();
+  });</script>
